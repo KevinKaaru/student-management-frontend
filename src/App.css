@@ -1,38 +1,124 @@
-.App {
+/* PAGE BACKGROUND */
+.page {
+  background: linear-gradient(135deg, #a8c0ff, #3f2b96);
+  min-height: 100vh;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+/* MAIN CONTAINER */
+.container {
+  width: 600px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* TITLE */
+.title {
+  font-size: 36px;
+  color: white;
+  margin-bottom: 25px;
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* GLASS CARD EFFECT */
+.glass {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 25px;
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  margin-top: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* INPUT */
+.input {
+  width: 90%;
+  padding: 12px;
+  margin: 8px auto;
+  display: block;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+/* BUTTON STYLE */
+.button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #4f46e5;
+  color: white;
+  font-size: 16px;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.button.big {
+  width: 200px;
+  margin-top: 20px;
+}
+
+/* BUTTON GLOW */
+.glow:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #a78bfa;
+}
+
+/* LIST */
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.list-item {
+  background: rgba(255,255,255,0.1);
+  padding: 12px;
+  border-radius: 10px;
+  margin: 10px 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* ANIMATIONS */
+.fade-in {
+  animation: fadeIn 0.8s ease-in-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.slide-up {
+  animation: slideUp 0.7s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.error-text {
+  color: #ff4d4d;
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.close-btn {
+  float: right;
+  background: #ff4d4d;
+  border: none;
+  padding: 6px 12px;
+  color: white;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.close-btn:hover {
+  background: #d93636;
+  transform: scale(1.05);
 }
