@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_BASE = "https://student-management-backend-production-cc0a.up.railway.app/api/students";
+const API_BASE = "https://student-management-backend-production-8096.up.railway.app/api/students";
 
 export const getStudents = () => axios.get(API_BASE);
 
